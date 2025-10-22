@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+
+.flex{
+    display: flex;
+    gap: 10px;
+}
+
+.flex > div{
+    background-color: #ccc;
+    padding: 20px;
+}
+
+/* Media Queries -tablet */
+@media (max-width: 1024px){
+    .flex{
+        flex-wrap: wrap;
+    }
+
+    .flex > div{
+        width: calc(50% - 45px);
+    }
+}
+
+@media (max-width: 768px){
+    .flex > div{
+        width: 100%;
+    }
+}
