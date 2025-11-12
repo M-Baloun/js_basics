@@ -100,13 +100,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log( divX)
 })
-*/
+
 
 const divX = document.getElementById("insert-here");
+*/
+
+let counter = 0;
+
+const divX = () => {
+        return document.getElementById("insert-here");
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    const divX = document.getElementById("insert-here");
 
     for (let i = 0; i < 3; i++) {
 
@@ -119,6 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const insert = () => {
-    alert("insert")
+    divX().innerHTML += '<div>Ahoj + ' + counter++ + '</div>';
 }
 
