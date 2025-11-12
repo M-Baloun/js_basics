@@ -37,7 +37,7 @@ console.warn("Hello, World!")
 console.error("Hello, World!")
 
 
-*/
+
 
 function getImage(url, xx, yyy) {
     console.log(url);
@@ -76,7 +76,7 @@ getImage5("a");
 
 
 const timer = (callback, time) => {
-    setTimeout(callback(), time)
+    setTimeout(callback, time)
 }
 
 timer(() => console.log("Hello, World!"), 1000)
@@ -84,11 +84,41 @@ timer(() => console.log("Hello, World!"), 1000)
 
 
 function timer2(callback, time) {
-    setTimeout(callback(), time)
+    setTimeout(callback, time)
 }
 
 timer2(function () {
     console.log("Hello, World!")
 }, 1000)
 
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const divX = document.getElementById("insert-here");
+
+    console.log( divX)
+})
+*/
+
+const divX = document.getElementById("insert-here");
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const divX = document.getElementById("insert-here");
+
+    for (let i = 0; i < 3; i++) {
+
+        divX.innerHTML += '<div>Ahoj' + (i + 2)+ '</div>';
+        //divX.innerHTML = divX.innerHTML + '<div>Ahoj + ' + (i + 2)+ '</div>'; toto radši ne
+    }
+
+    const clickMeBtn = document.getElementById("click-me");
+    clickMeBtn.addEventListener("click", insert)
+})
+
+const insert = () => {
+    alert("insert")
+}
 
