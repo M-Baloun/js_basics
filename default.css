@@ -1,4 +1,5 @@
-body{
+/*body{
+    padding: 0;
     margin: 0;
 }
 
@@ -12,7 +13,7 @@ body{
     padding: 20px;
 }
 
-/* Media Queries -tablet */
+/* Media Queries -tablet
 @media (max-width: 1024px){
     .flex{
         flex-wrap: wrap;
@@ -26,5 +27,32 @@ body{
 @media (max-width: 768px){
     .flex > div{
         width: 100%;
+    }
+}
+*/
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid black;
+    background-color: blue;
+    width: 500px;
+    height: 500px;
+    transition: all .5s ease-in-out;
+}
+
+.square.active {
+    display: block;
+    color: black;
+    border: 1px solid red;
+    background-color: orange;
+    height: 100px;
+    width: 100px;
+}
+
+@media screen and (max-width: 720px) {
+    .square {
+        display: none;
     }
 }

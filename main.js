@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const divX = document.getElementById("insert-here");
-*/
+
 
 let counter = 0;
 
@@ -128,3 +128,30 @@ const insert = () => {
     divX().innerHTML += '<div>Ahoj + ' + counter++ + '</div>';
 }
 
+**HTML k js
+
+
+<div class="flex">
+    <div>Col 1</div>
+    <div>Col 2</div>
+    <div>Col 3</div>
+    <div>Col 4</div>
+</div>
+
+
+
+<button onclick="insert()">Add</button>
+<button id="click-me">Add2</button>
+<div id="insert-here"></div>
+
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const square = document.getElementById("square");
+    const toggleButton = document.getElementById("toggle");
+
+    toggleButton.addEventListener("click", () => {
+        square.classList.toggle("active");
+    });
+
+});
