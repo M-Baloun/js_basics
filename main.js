@@ -145,7 +145,7 @@ const insert = () => {
 <div id="insert-here"></div>
 
 */
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
     const square = document.getElementById("square");
     const toggleButton = document.getElementById("toggle");
@@ -155,3 +155,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+*/
+/*
+document.addEventListener("DOMContentLoaded", () => {
+    const x = undefined;
+
+    let a = x ??10;
+
+})
+
+ */
+document.addEventListener("DOMContentLoaded", () => {
+
+    const bounce = document.getElementById("bounce");
+    let size = 10
+    let maxSize = 200
+    let minSize = 10
+    let growing = true
+
+    function SizeAdd() {
+        if (size >= maxSize) {
+            growing = false
+        }
+        else if (size <= minSize) {
+            growing = true
+        }
+        size += growing ? 6 : -7
+        bounce.style.fontSize = size + "px"
+}
+
+setInterval(SizeAdd, 100)
+})
