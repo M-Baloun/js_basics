@@ -180,9 +180,9 @@ document.addEventListener("DOMContentLoaded", () => {
         else if (size <= minSize) {
             growing = true
         }
-        size += growing ? 6 : -7
+        size += growing ? 0.5 : -0.5
         bounce.style.fontSize = size + "px"
 }
 
-setInterval(SizeAdd, 100)
+setInterval(SizeAdd, 0.01)
 })
